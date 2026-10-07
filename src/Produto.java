@@ -1,14 +1,36 @@
 public class Produto {
-        String Nome;
-        int quantidade;
-        int Estoque;
+        private String Nome;
+        private int Estoque;
+
+        public String getNome() {
+                return Nome;
+        }
+        public void setNome(String Nome) {
+                this.Nome = Nome;
+        }
+
+
+        public int getEstoque() {
+                return Estoque;
+        }
+        public void setEstoque(int Estoque) {
+                if (Estoque >= 0) {
+                        this.Estoque = Estoque;
+                }else  {
+                        System.out.println("Estoque não pode ser negativo");
+                }
+        }
 
         void AdicionarEstoque(int quantidade) {
                 Estoque += quantidade;
         }
 
         void RemoverEstoque(int quantidade) {
-                Estoque -= quantidade;
+                if (quantidade <= Estoque) {
+                        Estoque -= quantidade;
+                } else {
+                        System.out.println("Estoque insuficiente");
+                }
         }
 
         void exibirFicha() {
