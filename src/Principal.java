@@ -13,5 +13,12 @@ public class Principal {
         padaria.setDiasRestante(3);
         padaria.setDataDeFabricacao("01/01/2099");
         padaria.exibirFicha();
+
+        ProdutoDeAcougue acougue = new ProdutoDeAcougue();
+        acougue.setNome("Acou");
+        acougue.setTipoDeCarne("picanha");
+        acougue.setEstoque(20);
+        acougue.setPrecoEmKg(49.90);
+        acougue.exibirFicha();
     }
 }
