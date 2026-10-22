@@ -1,6 +1,14 @@
-public class ProdutoDePadaria extends Produto {
+public class ProdutoDePadaria extends Produto implements Perecivel {
     private double diasRestante;
     private String dataDeFabricacao;
+
+    public void exibirAlertaDeValidade() {
+        if (diasRestante <= 5) {
+            System.out.println("esta proximo de vencer resta apenas " + diasRestante);
+        } else {
+            System.out.println("Não esta proximo de vencer");
+        }
+    }
 
     public double getDiasRestante() {
         return diasRestante;
