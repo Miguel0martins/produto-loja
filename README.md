@@ -60,8 +60,7 @@ Também é possível abrir o projeto no IntelliJ IDEA e executar a classe `Princ
 - [x] **Aula 2:** encapsulamento, getters e setters, `this` e validações
 - [x] **Aula 3:** herança (`extends`), `@Override`, `super` e polimorfismo, com `ProdutoDePadaria` e `ProdutoDeAcougue`
 - [x] **Aula 4:** interface `Perecivel` e polimorfismo com interfaces
-- [ ] **Aula 5:** a ser atualizado conforme o curso avança
-
+- [x] **Aula 5:** desafio final do curso, no repositório [musicas-podcasts](https://github.com/Miguel0martins/musicas-podcasts)
 ## Autor
 
 Miguel Martins — [GitHub](https://github.com/Miguel0martins)
