@@ -1,11 +1,13 @@
+package br.com.miguelmartins.produtoloja.model;
+
 public class ProdutoDeAcougue extends Produto implements Perecivel {
     private String tipoDeCarne;
     private double precoEmKg;
-    private double diasRestante;
+    private int diasRestante;
 
     public void exibirAlertaDeValidade() {
         if (diasRestante <= 5) {
-            System.out.println("esta proximo de vencer resta apenas " + diasRestante);
+            System.out.println("esta proximo de vencer resta apenas " + diasRestante + " dias");
         } else {
             System.out.println("Não esta proximo de vencer");
         }
@@ -17,7 +19,7 @@ public class ProdutoDeAcougue extends Produto implements Perecivel {
     }
 
     public void setDiasRestante(double diasRestante) {
-        this.diasRestante = diasRestante;
+        this.diasRestante = (int) diasRestante;
     }
 
 
@@ -37,7 +39,7 @@ public class ProdutoDeAcougue extends Produto implements Perecivel {
         this.tipoDeCarne = tipoDeCarne;
     }
 
-    void exibirFicha() {
+    public void exibirFicha() {
         super.exibirFicha();
         System.out.println("Tipo de carne: " + tipoDeCarne);
         System.out.println("Preço em kg: " + precoEmKg);

@@ -1,10 +1,12 @@
+package br.com.miguelmartins.produtoloja.model;
+
 public class ProdutoDePadaria extends Produto implements Perecivel {
-    private double diasRestante;
+    private int diasRestante;
     private String dataDeFabricacao;
 
     public void exibirAlertaDeValidade() {
         if (diasRestante <= 5) {
-            System.out.println("esta proximo de vencer resta apenas " + diasRestante);
+            System.out.println("esta proximo de vencer resta apenas " + diasRestante + " dias");
         } else {
             System.out.println("Não esta proximo de vencer");
         }
@@ -15,7 +17,7 @@ public class ProdutoDePadaria extends Produto implements Perecivel {
     }
 
     public void setDiasRestante(double diasRestante) {
-        this.diasRestante = diasRestante;
+        this.diasRestante = (int)diasRestante;
     }
 
     public String getDataDeFabricacao() {
@@ -27,7 +29,7 @@ public class ProdutoDePadaria extends Produto implements Perecivel {
     }
 
     @Override
-    void exibirFicha() {
+    public void exibirFicha() {
         super.exibirFicha();
         System.out.println("Dias restantes: " + diasRestante);
         System.out.println("Data de fabricação: " + dataDeFabricacao);

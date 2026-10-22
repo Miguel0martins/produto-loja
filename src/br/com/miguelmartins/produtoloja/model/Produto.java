@@ -1,3 +1,5 @@
+package br.com.miguelmartins.produtoloja.model;
+
 public class Produto {
     private String Nome;
     private int Estoque;
@@ -23,11 +25,11 @@ public class Produto {
         }
     }
 
-    void AdicionarEstoque(int quantidade) {
+   public void AdicionarEstoque(int quantidade) {
         Estoque += quantidade;
     }
 
-    void RemoverEstoque(int quantidade) {
+   public void RemoverEstoque(int quantidade) {
         if (quantidade <= Estoque) {
             Estoque -= quantidade;
         } else {
@@ -35,8 +37,8 @@ public class Produto {
         }
     }
 
-    void exibirFicha() {
-        System.out.println("Produto: " + Nome);
+   public void exibirFicha() {
+       System.out.println("Produto: " + Nome);
         System.out.println("Estoque: " + Estoque);
     }
 

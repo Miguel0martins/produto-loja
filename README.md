@@ -30,17 +30,21 @@ O projeto evolui junto com o curso: a cada aula, novos conceitos são aplicados 
 - Sobrescrita de métodos com `@Override` e uso do `super`
 - Interfaces com `implements`
 - Polimorfismo, tanto por herança quanto por interface
+- Organização do código em pacotes
 
 ## Estrutura
 
 ```
 produto-loja/
 └── src/
-    ├── Produto.java           # classe base: nome, estoque e métodos de estoque
-    ├── ProdutoDePadaria.java  # herda de Produto e implementa Perecivel
-    ├── ProdutoDeAcougue.java  # herda de Produto e implementa Perecivel
-    ├── Perecivel.java         # interface com o alerta de validade
-    └── Principal.java         # classe com o método main, que cria e testa os produtos
+    └── br/com/miguelmartins/produtoloja/
+        ├── model/
+        │   ├── Produto.java           # classe base: nome, estoque e métodos de estoque
+        │   ├── ProdutoDePadaria.java  # herda de Produto e implementa Perecivel
+        │   ├── ProdutoDeAcougue.java  # herda de Produto e implementa Perecivel
+        │   └── Perecivel.java         # interface com o alerta de validade
+        └── main/
+            └── Principal.java         # método main, que cria e testa os produtos
 ```
 
 ## Como executar
@@ -48,8 +52,8 @@ produto-loja/
 Na raiz do projeto:
 
 ```bash
-javac src/*.java
-java -cp src Principal
+javac -d out src/br/com/miguelmartins/produtoloja/*/*.java
+java -cp out br.com.miguelmartins.produtoloja.main.Principal
 ```
 
 Também é possível abrir o projeto no IntelliJ IDEA e executar a classe `Principal`.
@@ -57,10 +61,11 @@ Também é possível abrir o projeto no IntelliJ IDEA e executar a classe `Princ
 ## Evolução do projeto
 
 - [x] **Aula 1:** classe `Produto`, atributos, objetos e métodos
-- [x] **Aula 2:** encapsulamento, getters e setters, `this` e validações
+- [x] **Aula 2:** encapsulamento, getters e setters, `this`, validações e pacotes
 - [x] **Aula 3:** herança (`extends`), `@Override`, `super` e polimorfismo, com `ProdutoDePadaria` e `ProdutoDeAcougue`
 - [x] **Aula 4:** interface `Perecivel` e polimorfismo com interfaces
-- [x] **Aula 5:** desafio final do curso, no repositório [musicas-podcasts](https://github.com/Miguel0martins/musicas-podcasts)
+- [ ] **Aula 5:** desafio final do curso (sistema de músicas e podcasts), feito em outro repositório, em andamento
+
 ## Autor
 
 Miguel Martins — [GitHub](https://github.com/Miguel0martins)
