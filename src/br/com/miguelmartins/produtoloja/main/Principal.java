@@ -43,7 +43,7 @@ public class Principal {
         Perecivel a = padaria;
         Perecivel b = acougue;
 
-        System.out.println("=====ALERTAS======");
+    System.out.println("=====ALERTAS======");
 
         a.exibirAlertaDeValidade();
         b.exibirAlertaDeValidade();
